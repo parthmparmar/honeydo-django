@@ -23,3 +23,8 @@ urlpatterns = [
     path("todos/", include("todos.urls")),
     path('admin/', admin.site.urls),
 ]
+
+# Code to customize the admin page
+admin.site.site_header = "Custom ToDos Admin"
+admin.site.site_title  =  "Custom ToDos Admin site"
+admin.site.index_title  =  "Custom ToDos Admin"

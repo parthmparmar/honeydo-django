@@ -1,1 +1,1 @@
-web: gunicorn honeydo.honeydo.wsgi
+web: gunicorn honeydo.honeydo.wsgi:application

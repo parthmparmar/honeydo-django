@@ -32,7 +32,7 @@ SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-if env("DEBUG"):
+if "DEBUG" in os.environ:
     DEBUG = env("DEBUG")
 else:
     DEBUG = False
@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'honeydo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if env("NAME"):
+if "NAME" in os.environ:
 
     DATABASES = {
         'default': {
@@ -97,6 +97,7 @@ if env("NAME"):
         }
     }
 else:
+    
     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 

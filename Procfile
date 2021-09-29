@@ -1,1 +1,1 @@
-web: gunicorn honeydo.wsgi
+web: gunicorn todos.wsgi --log-file-
